@@ -1,0 +1,140 @@
+/* Root */
+:root{
+    --primary-color: #333;
+    --secondary-color: #f2f2f2;
+    --tertiary-color: #525252;
+    --quaternary-color: #d5dbdb;
+    --quinary-color: #444;
+    --senary-color: #222;
+    --septenary-color: #111;
+    --font-family: 'Urbanist', sans-serif;
+    --font-family-ar: 'Almarai', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.header {
+    font-family: var(--font-family-ar);
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--tertiary-color);
+    padding: 20px;
+    border-bottom: 1px solid var(--senary-color);
+}
+
+.header h1,
+.header p {
+    color: var(--secondary-color);
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.card {
+    font-family: var(--font-family);
+    width: 300px;
+    height: 200px;
+    background-color: var(--tertiary-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover {
+    background-color: var(--secondary-color);
+    color: var(--septenary-color);
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    padding-bottom: 30px;
+}
+
+.dark-mode {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#dark-mode-button {
+    font-family: 'Almarai', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#dark-mode-button.dark-mode {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.github-profile {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.github-button {
+    font-family: 'Almarai', sans-serif;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.github-button:hover {
+    background-color: var(--quaternary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--secondary-color);
+        color: var(--septenary-color);
+    }
+
+    .header {
+        background-color: var(--tertiary-color);
+        padding: 20px;
+        border-bottom: 1px solid var(--senary-color);
+    }
+
+    .header h1,
+    .header p {
+        color: var(--secondary-color);
+    }
+
+    .github-button {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+
+    .github-button:hover {
+        background-color: var(--quaternary-color);
+    }
+}
