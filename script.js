@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const card = document.createElement('div');
         card.classList.add('card');
         card.onclick = function () {
-            window.location.href = repoLink;
+            window.open(repoLink, '_blank');
         };
 
         const titleElement = document.createElement('h2');
